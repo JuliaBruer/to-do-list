@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Liste</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="init()">
+    <div class="slider-container">
+    <img id="img1" class="slider-image" src="img/1.jpg">
+    <img id="img2" class="slider-image" style="transform: translateX(100%)" src="img/2.jpg">
+    <img id="img3" class="slider-image" style="transform: translateX(200%)" src="img/3.jpg">
+    </div>
+
+    <h1>To Do Liste</h1>
+
+    <table id="table">
+        <tr>
+            <td class="data"><b>Frist</b></td>
+            <td class="data"><b>To Do</b></td>
+            <td class="data"></td>
+        </tr>
+    </table>
+
+    <div class="input">
+    <input class="inputfield1" type="date" id="inputDeadline">
+    <input class="inputfield2" type="text" id="inputToDo" placeholder="trage hier dein To Do ein">
+    <button class="btn" onclick="addToDo()">hinzufügen</button>
+    </div>
+    
+</body>
+</html>
