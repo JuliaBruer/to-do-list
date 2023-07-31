@@ -8,7 +8,10 @@ function init(){
     renderNotes();
 }
 
-//imageSlider
+/**
+ * this function renders the image slider
+ *
+ */
 function imageSlider(){
     setTimeout(function(){
         document.getElementById('img1').style = 'transform: translateX(-100%)';
@@ -31,7 +34,7 @@ function imageSlider(){
     }, 9000);
 }
 
-// to Do Liste
+// to do list starts here
 function addToDo(){
     let deadline = document.getElementById('inputDeadline').value;
     let todo = document.getElementById('inputToDo').value;
@@ -47,7 +50,10 @@ function addToDo(){
     document.getElementById('inputToDo').value = '';
 }
     
-
+/**
+ * this function renders the to do list
+ *
+ */
 function renderNotes(){
     document.getElementById('table').innerHTML = '';
     document.getElementById('table').innerHTML += `
@@ -66,16 +72,16 @@ function renderNotes(){
 }
 
 function generateTableHTML(deadline, todo, i){
-    const date = new Date(deadline);
-    const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const year = date.getFullYear().toString();
-    const formattedDate = `${day}.${month}.${year}`;
+    let date = new Date(deadline);
+    let day = date.getDate().toString().padStart(2, '0');
+    let month = (date.getMonth() + 1).toString().padStart(2, '0');
+    let year = date.getFullYear().toString();
+    let formattedDate = `${day}.${month}.${year}`;
 
     return `
             <tr>
             <td class="data">${formattedDate}</td>
-            <td class="data">${todo}</td>
+            <td class="data to-do-content">${todo}</td>
             <td class="data"><button class="btn" onclick="deleteContact(${i})">löschen</button></td>
             </tr>
         `;

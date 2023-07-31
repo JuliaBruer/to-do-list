@@ -46,6 +46,10 @@ table th {
     border: 2px solid #c4b0aa;
 }
 
+.to-do-content {
+    word-break: break-all;
+}
+
 .input {
     display: flex;
     justify-content: center;
