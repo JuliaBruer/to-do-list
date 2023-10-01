@@ -30,7 +30,7 @@ h1 {
 
 table {
     border-collapse: collapse;
-    width: 50%;
+    width: 70%;
     background-color: #ddd;
     margin: auto;
     border-radius: 20px;
@@ -50,10 +50,16 @@ table th {
     word-break: break-all;
 }
 
+.trash-container {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
 .input {
     display: flex;
     justify-content: center;
-    margin: 40px;
+    margin: 30px;
     flex-wrap: wrap;
 }
 
@@ -65,8 +71,33 @@ table th {
     border: none;
 }
 
+.inputfield2 {
+    width: 163px;
+}
+
+.inputfield1, .inputfield2:hover {
+    cursor: pointer;
+}
+
 .btn:hover {
     background-color: #c2a096;
     box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24),0 15px 40px 0 rgba(0,0,0,0.19);
     cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    table {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    table {
+        width: 95%;
+    }
+    
+    table td,
+    table th {
+        margin: 5px;
+    }
 }
